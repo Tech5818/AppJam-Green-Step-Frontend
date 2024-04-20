@@ -8,7 +8,7 @@ export default function ResultPage() {
     <>
       <Mobile>
         <Container>
-          <img src={`data:image/jpeg:base64,${data}`} />
+          <img src={`data:image/jpeg;base64,${data}`} />
         </Container>
       </Mobile>
     </>
