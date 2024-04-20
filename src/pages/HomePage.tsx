@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Mobile } from "../Responsive";
 import { AirQuality } from "../components/homePage/airQuality/AirQuality";
-import { Forest } from "../components/homePage/Forest";
+import { Forest } from "../components/homePage/forest/Forest";
 
 export default function HomePage() {
   return (
@@ -22,4 +22,5 @@ const Container = styled.div`
   display: flex;
   flex-flow: column;
   gap: 30px;
+  overflow: hidden;
 `;

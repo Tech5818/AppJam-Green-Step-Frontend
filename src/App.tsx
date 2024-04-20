@@ -9,6 +9,7 @@ import { useCurrentUrl } from "./store/CurrentUrl";
 const HomePage = loadable(() => import("./pages/HomePage"));
 const CommunityPage = loadable(() => import("./pages/CommunityPage"));
 const MyPage = loadable(() => import("./pages/MyPage"));
+const CameraPage = loadable(() => import("./pages/CameraPage"));
 
 function App() {
   const { setCurrentUrl } = useCurrentUrl();
@@ -31,6 +32,11 @@ function App() {
               loader={HomePage.load}
             />
             <Route path="/profile" element={<MyPage />} loader={MyPage.load} />
+            <Route
+              path="/camera"
+              element={<CameraPage />}
+              loader={CameraPage.load}
+            />
           </Routes>
         </Content>
         <BottomNavigationBar />
@@ -46,6 +52,7 @@ const Container = styled.div`
 `;
 const Content = styled.div`
   flex: 1;
+  overflow-y: scroll;
 `;
 
 export default App;
