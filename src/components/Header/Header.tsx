@@ -4,6 +4,7 @@ import { useCurrentUrl } from "../../store/CurrentUrl";
 import { Home } from "../svg/Home";
 import { Share } from "../svg/Share";
 import { Profile } from "../svg/Profile";
+import { Camera } from "../svg/Camera";
 
 export const Header = () => {
   const { currentUrl } = useCurrentUrl();
@@ -15,6 +16,8 @@ export const Header = () => {
       return <Share color="#5EC570" />;
     } else if (currentUrl.includes("/profile")) {
       return <Profile color="#5EC570" />;
+    } else if (currentUrl.includes("/camera")) {
+      return <Camera color="#5EC570" />;
     } else {
       return null;
     }

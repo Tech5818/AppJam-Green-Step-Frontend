@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Mobile } from "../Responsive";
-import { AirQuality } from "../components/homePage/AirQuality";
+import { AirQuality } from "../components/homePage/airQuality/AirQuality";
 import { Forest } from "../components/homePage/Forest";
 
 export default function HomePage() {
