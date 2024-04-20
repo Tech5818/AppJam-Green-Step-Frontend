@@ -13,9 +13,12 @@ export const Camera: React.FC = () => {
 
   const { mutate } = useMutation({
     mutationFn: async (blob: Blob) => {
-      const response = await axios.post("e", { file: blob });
-      setData(response as string);
-      navigate("/result");
+      const response = await axios.post("/", {
+        file: blob,
+      });
+      console.log(response);
+
+      // navigate("/result");
     },
   });
 
