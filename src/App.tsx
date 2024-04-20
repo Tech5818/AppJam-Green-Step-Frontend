@@ -9,8 +9,8 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} loader={HomePage.load} />
-        <BottomNavigationBar />
       </Routes>
+      <BottomNavigationBar />
     </>
   );
 }
