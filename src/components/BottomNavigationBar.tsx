@@ -3,18 +3,34 @@ import { Mobile } from "../Responsive";
 import { Share } from "./svg/Share";
 import { Home } from "./svg/Home";
 import { Profile } from "./svg/Profile";
+import { useEffect } from "react";
+import { useCurrentUrl } from "../store/CurrentUrl";
 import { Link } from "react-router-dom";
 
 export const BottomNavigationBar = () => {
-  // const;
+  const { currentUrl } = useCurrentUrl();
+
+  useEffect(() => {
+    console.log(currentUrl);
+  });
 
   return (
     <>
       <Mobile>
         <Container>
-          <Share />
-          <Home />
-          <Profile />
+          <Link to={"community"}>
+            <Share
+              color={currentUrl.includes("/community") ? "#5EC570" : "#C6C6C6"}
+            />
+          </Link>
+          <Link to={"/"}>
+            <Home color={currentUrl === "/" ? "#5EC570" : "#C6C6C6"} />
+          </Link>
+          <Link to={"/profile"}>
+            <Profile
+              color={currentUrl.includes("/profile") ? "#5EC570" : "#C6C6C6"}
+            />
+          </Link>
         </Container>
       </Mobile>
     </>
