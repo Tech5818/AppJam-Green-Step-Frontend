@@ -1,4 +1,5 @@
 import { Mobile } from "../Responsive";
+import { FriendList } from "../components/communityPage/FriendList";
 import { Search } from "../components/communityPage/Search";
 
 export default function CommunityPage() {
@@ -6,6 +7,7 @@ export default function CommunityPage() {
     <>
       <Mobile>
         <Search />
+        <FriendList />
       </Mobile>
     </>
   );
