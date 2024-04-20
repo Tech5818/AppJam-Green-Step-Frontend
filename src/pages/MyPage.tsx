@@ -1,4 +1,5 @@
 import { Mobile } from "../Responsive";
+import { MyTree } from "../components/myPage/MyTree";
 import { Profile } from "../components/myPage/profile/Profile";
 
 export default function MyPage() {
@@ -6,6 +7,7 @@ export default function MyPage() {
     <>
       <Mobile>
         <Profile />
+        <MyTree />
       </Mobile>
     </>
   );

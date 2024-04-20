@@ -1,12 +1,13 @@
 import { Box, Text } from "@chakra-ui/react";
 import styled from "styled-components";
+import UserIcon from "../../../assets/UserIcon.png";
 
 export const Profile = () => {
   return (
     <>
       <Container>
         <Content>
-          <ProfileImg />
+          <ProfileImg src={UserIcon} />
           <Box
             display={"flex"}
             flexFlow={"column"}
@@ -45,9 +46,9 @@ const Content = styled.div`
   gap: 20px;
 `;
 
-const ProfileImg = styled.div`
+const ProfileImg = styled.img`
   width: 70px;
   height: 70px;
-  background: #aaa;
   border-radius: 50%;
+  overflow: hidden;
 `;

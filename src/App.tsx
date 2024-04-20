@@ -10,6 +10,7 @@ const HomePage = loadable(() => import("./pages/HomePage"));
 const CommunityPage = loadable(() => import("./pages/CommunityPage"));
 const MyPage = loadable(() => import("./pages/MyPage"));
 const CameraPage = loadable(() => import("./pages/CameraPage"));
+const ResultPage = loadable(() => import("./pages/ResultPage"));
 
 function App() {
   const { setCurrentUrl } = useCurrentUrl();
@@ -36,6 +37,11 @@ function App() {
               path="/camera"
               element={<CameraPage />}
               loader={CameraPage.load}
+            />
+            <Route
+              path="/result"
+              element={<ResultPage />}
+              loader={ResultPage.load}
             />
           </Routes>
         </Content>

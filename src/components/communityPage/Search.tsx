@@ -1,12 +1,25 @@
 import styled from "styled-components";
 import { Search as SearchIcon } from "../svg/Search";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Search = () => {
+  const [text, setText] = useState("");
+  const navigation = useNavigate();
+  const handleSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    navigation(`/community?name=${text}`);
+  };
   return (
     <>
       <Container>
-        <SearchForm>
-          <SearchInput placeholder="친구 검색" />
+        <SearchForm onSubmit={handleSubmit}>
+          <SearchInput
+            placeholder="친구 검색"
+            onChange={(e) => {
+              setText(e.target.value);
+            }}
+          />
           <SearchBox>
             <SearchIcon />
           </SearchBox>
