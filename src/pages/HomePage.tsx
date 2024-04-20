@@ -1,9 +1,25 @@
+import styled from "styled-components";
 import { Mobile } from "../Responsive";
+import { AirQuality } from "../components/homePage/AirQuality";
+import { Forest } from "../components/homePage/Forest";
 
 export default function HomePage() {
   return (
     <>
-      <Mobile>home</Mobile>
+      <Mobile>
+        <Container>
+          <Forest />
+          <AirQuality />
+        </Container>
+      </Mobile>
     </>
   );
 }
+
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+`;

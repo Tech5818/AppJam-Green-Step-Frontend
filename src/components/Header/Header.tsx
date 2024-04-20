@@ -40,6 +40,7 @@ const Container = styled.div`
   align-items: flex-end;
   gap: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  z-index: 100;
 `;
 
 const Logo = styled.img``;
